@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Indian Rivers</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_rate">Rate</string>
+    <string name="nav_share">Share</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="thanku">Thank you for your valueable suggestion.we will consider it.</string>
+    <string name="ad_app_id">ca-app-pub-5013638152042731~7875078560</string>
+    <string name="Ad_englishfragment">ca-app-pub-5013638152042731/4291056776</string>
+    <string name="Ad_hindifragment">ca-app-pub-5013638152042731/8968668387</string>
+    <string name="Ad_suggestionfragment">ca-app-pub-5013638152042731/6178853518</string>
+    <string name="Ad_langalert">ca-app-pub-5013638152042731/2403260033</string>
+    <string name="Ad_langalert2">ca-app-pub-5013638152042731/5769705698</string>
+    <string name="Ad_exit">ca-app-pub-5013638152042731/2048036816</string>
+    <string name="Ad_detail">ca-app-pub-5013638152042731/8040645812</string>
+</resources>
