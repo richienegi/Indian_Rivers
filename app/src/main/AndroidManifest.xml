@@ -7,14 +7,23 @@
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Map"></activity>
+        <activity android:name=".DetailPage"></activity>
+        <activity android:name=".Peninsular" />
+        <activity android:name=".Himalayan" />
+        <activity android:name=".River_System" />
+        <activity android:name=".Suggestions" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".Questions" />
+        <activity android:name=".AnswerSheet" />
+        <activity android:name=".Map" />
+        <activity android:name=".MainOption" />
 
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"

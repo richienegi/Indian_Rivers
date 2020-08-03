@@ -8,26 +8,28 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class DetailActivity extends AppCompatActivity {
     protected TextView msource;
     protected TextView mlength;
     protected TextView mdrain;
-    protected TextView mname;
+    protected TextView milength;
     TextView mtributeries,mabout,mleft,mright,mdam,mmyth;
 CardView ma,ml,mr,md,mm;
 AdView mAdView;
+    AdRequest adRequest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,12 +40,12 @@ AdView mAdView;
             }
         });
         mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+         adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         msource = (TextView) findViewById(R.id.source);
         mlength = (TextView) findViewById(R.id.length);
         mdrain = (TextView) findViewById(R.id.drain);
-       /* mname = (TextView) findViewById(R.id.Name);*/
+       milength = (TextView) findViewById(R.id.ilength);
         mtributeries = (TextView) findViewById(R.id.tributeries);
         mabout = (TextView) findViewById(R.id.about);
         mleft = (TextView) findViewById(R.id.left);
@@ -61,6 +63,15 @@ AdView mAdView;
         msource.setText(intent.getStringExtra("source"));
         mlength.setText(intent.getStringExtra("length"));
         mdrain.setText(intent.getStringExtra("drain"));
+        if (getIntent().getStringExtra("ilength")!=null) {
+            milength.setVisibility(View.VISIBLE);
+            milength.setText(intent.getStringExtra("ilength"));
+        }
+        else
+        {
+            milength.setVisibility(View.GONE);
+        }
+
         if (!getIntent().getStringExtra("summary").isEmpty()) {
 mtributeries.setVisibility(View.VISIBLE);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -113,6 +124,21 @@ mtributeries.setVisibility(View.VISIBLE);
             }
 
         }
+        TimerTask tt = new TimerTask() {
+
+            @Override
+            public void run() {
+                DetailActivity.this.runOnUiThread(new Runnable() {
+                    public void run() {
+                        mAdView.loadAd(adRequest);
+                    }
+                });
+
+            }
+        };
+
+        Timer t = new Timer();
+        t.scheduleAtFixedRate(tt, 0, 1000 * 30);
     }
     @Override
     protected void onPause() {
@@ -137,5 +163,6 @@ mtributeries.setVisibility(View.VISIBLE);
         }
         super.onDestroy();
     }
+
 
 }

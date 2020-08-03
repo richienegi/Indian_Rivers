@@ -21,6 +21,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
     String length="";
     String source="";
     String destionation="";
+    String indialength="";
 Context c;
     public ContactAdapter(List<ContactInfo> contactList,Context c) {
         this.c=c;
@@ -41,6 +42,7 @@ Context c;
             length=ContactInfo.HLength;
             source=ContactInfo.HSource;
             destionation=ContactInfo.HDestination;
+            indialength=ContactInfo.HindianLength;
         }
         else if(MainActivity.lang.equalsIgnoreCase("English"))
         {
@@ -48,17 +50,36 @@ Context c;
             length=ContactInfo.ELength;
             source=ContactInfo.ESource;
             destionation=ContactInfo.EDestination;
+            indialength=ContactInfo.EindianLength;
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             contactViewHolder.msource.setText(Html.fromHtml("<b>"+source+"</b>"+ci.source,Html.FROM_HTML_MODE_COMPACT));
             contactViewHolder.mlength.setText(Html.fromHtml("<b>"+length+"</b>"+ci.length,Html.FROM_HTML_MODE_COMPACT));
             contactViewHolder.mdrain.setText(Html.fromHtml("<b>"+destionation+"</b>"+ci.destination,Html.FROM_HTML_MODE_COMPACT));
             contactViewHolder.mname.setText(Html.fromHtml( (i+1)+" : "+"<b>"+ci.name+"</b>",Html.FROM_HTML_MODE_COMPACT));
+            if (ci.indian_length!=null) {
+                contactViewHolder.mIlength.setVisibility(View.VISIBLE);
+                contactViewHolder.mIlength.setText(Html.fromHtml("<b>" + indialength + "</b>" + ci.indian_length, Html.FROM_HTML_MODE_COMPACT));
 
-        } else {
+            }
+            else
+            {
+                contactViewHolder.mIlength.setVisibility(View.GONE);
+            }
+            } else {
             contactViewHolder.msource.setText(Html.fromHtml("<b>"+source+"</b>"+ci.source));
             contactViewHolder.mlength.setText(Html.fromHtml("<b>"+length+"</b>"+ci.length));
             contactViewHolder.mdrain.setText(Html.fromHtml("<b>"+destionation+"</b>"+ci.destination));
+            if (ci.indian_length!=null) {
+                contactViewHolder.mIlength.setVisibility(View.VISIBLE);
+                contactViewHolder.mIlength.setText(Html.fromHtml("<b>"+indialength+"</b>"+ci.indian_length));
+
+            }
+            else
+            {
+                contactViewHolder.mIlength.setVisibility(View.GONE);
+            }
+
             contactViewHolder.mname.setText(Html.fromHtml((i+1)+" : "+"<b>"+ci.name+"</b>"));
         }
         contactViewHolder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +96,7 @@ Context c;
                 i.putExtra("right_tributaries",ci.right_tributaries);
                 i.putExtra("mythology",ci.mythology);
                 i.putExtra("dam",ci.dam);
+                i.putExtra("ilength",contactViewHolder.mIlength.getText().toString());
 
                 c.startActivity(i);
 
@@ -98,6 +120,7 @@ Context c;
         protected TextView mlength;
         protected TextView mdrain;
         protected TextView mname;
+        protected TextView mIlength;
 
         public ContactViewHolder(View v) {
             super(v);
@@ -105,6 +128,7 @@ Context c;
             mlength = (TextView) v.findViewById(R.id.length);
             mdrain = (TextView) v.findViewById(R.id.drain);
             mname = (TextView) v.findViewById(R.id.Name);
+            mIlength = (TextView) v.findViewById(R.id.indialength);
             cardView=v.findViewById(R.id.card_view);
         }
     }

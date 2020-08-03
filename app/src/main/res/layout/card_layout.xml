@@ -1,69 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-    <androidx.cardview.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/card_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        card_view:cardCornerRadius="4dp"
-        android:layout_margin="5dp">
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="4dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:fontFamily="@font/my_custom_font"
             android:id="@+id/Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/bkg_card"
-            android:text="contact det"
-            android:padding="2dp"
+            android:fontFamily="@font/my_custom_font"
             android:gravity="center_vertical"
+            android:padding="2dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/contact_det"
             android:textColor="@android:color/white"
-            android:textSize="18dp"/>
+            android:textSize="18sp" />
 
         <TextView
-            android:textColor="@color/textcolor"
             android:id="@+id/source"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="source"
+            android:layout_below="@id/Name"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/my_custom_font"
             android:gravity="center_vertical"
-            android:textSize="14dp"
-            android:layout_below="@id/Name"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="5dp"/>
+            android:text="@string/txt_source"
+            android:textColor="@color/textcolor"
+            android:textSize="14sp" />
 
         <TextView
-            android:textColor="@color/textcolor"
             android:id="@+id/length"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="length"
-            android:gravity="center_vertical"
-            android:textSize="14dp"
             android:layout_below="@id/drain"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/my_custom_font"
-            android:layout_marginLeft="5dp"/>
+            android:gravity="center_vertical"
+            android:text="@string/txt_length"
+            android:textColor="@color/textcolor"
+            android:textSize="14sp" />
 
         <TextView
-            android:textColor="@color/textcolor"
             android:id="@+id/drain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Drain"
-            android:gravity="center_vertical"
-            android:textSize="14dp"
-            android:fontFamily="@font/my_custom_font"
             android:layout_below="@id/source"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="5dp"/>
+            android:fontFamily="@font/my_custom_font"
+            android:gravity="center_vertical"
+            android:text="@string/txt_drain"
+            android:textColor="@color/textcolor"
+            android:textSize="14sp" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/indialength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/length"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/my_custom_font"
+            android:gravity="center_vertical"
+            android:text="@string/txt_indial"
+            android:textColor="@color/textcolor"
+            android:textSize="14sp" />
 
 
     </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>

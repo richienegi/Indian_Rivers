@@ -27,6 +27,8 @@ import com.google.android.gms.ads.AdView;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,6 +42,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class HMainList extends Fragment {
 AdView mAdView;
+    AdRequest adRequest;
     String lang="";
     RecyclerView recList;
     ProgressDialog progressBar;
@@ -63,10 +66,26 @@ AdView mAdView;
         recList = (RecyclerView)view.findViewById(R.id.hcardList);
         recList.setHasFixedSize(true);
         mAdView = view.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+         adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         progressBar = new ProgressDialog(getContext());
         demo();
+        TimerTask tt = new TimerTask() {
+
+            @Override
+            public void run() {
+                if (getActivity() != null) {
+                    getActivity().runOnUiThread(new Runnable() {
+                        public void run() {
+                            mAdView.loadAd(adRequest);
+                        }
+                    });
+                }
+            }
+        };
+
+        Timer t = new Timer();
+        t.scheduleAtFixedRate(tt, 0, 1000 * 30);
         return view;
     }
     public void demo()
@@ -87,7 +106,7 @@ AdView mAdView;
             @Override
             public void onResponse(Call<List<rivers>> call, Response<List<rivers>> response) {
                 List<rivers> riv= response.body();
-                Toast.makeText(getContext(), response.toString(), Toast.LENGTH_SHORT).show();
+
                 for (int i = 0; i < riv.size(); i++) {
                     ContactInfo ci = new ContactInfo();
                     ci.length =riv.get(i).getLength();
@@ -100,10 +119,12 @@ AdView mAdView;
                     ci.dam=riv.get(i).getDam();
                     ci.mythology=riv.get(i).getMythology();
                     ci.summary=riv.get(i).getSummary();
+                    ci.indian_length=riv.get(i).getIndian_length();
+                    ci.major=riv.get(i).getMajor();
                     result.add(ci);
+
                 }
                 setAdapter(result);
-                Toast.makeText(getContext(), result.get(0).name, Toast.LENGTH_SHORT).show();
 
 
 
@@ -143,13 +164,11 @@ AdView mAdView;
 
             Collections.sort(result, ContactInfo.RiverLegth);
 
-            for(int i=0;i<result.size();i++)
-            {
-                Log.d("mydatafor",result.get(i).length);
-            }
             setAdapter(result);
             Toast.makeText(getContext(), "sorted by Length", Toast.LENGTH_SHORT).show();
         }
+
+
         else if (item.getItemId()==R.id.lang)
         {
             showAlertDialog();

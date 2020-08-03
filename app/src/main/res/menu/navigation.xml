@@ -13,10 +13,10 @@
         android:title="हिन्दी"
         app:showAsAction="always"
        />
-    <item
+   <!-- <item
         android:id="@+id/suggestion"
         android:title="suggestion"
         app:showAsAction="always"
-        />
+        />-->
 
 </menu>

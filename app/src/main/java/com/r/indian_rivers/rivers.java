@@ -1,20 +1,51 @@
 package com.r.indian_rivers;
 
+import com.google.gson.annotations.SerializedName;
+
 public class rivers {
+    @SerializedName("id")
     int id;
+
+    @SerializedName("name")
     String name;
+
+    @SerializedName("length")
     String length;
+
+    @SerializedName("source")
     String source;
+
+    @SerializedName("destination")
     String destination;
+
+    @SerializedName("codeno")
     String codeno;
+
+    @SerializedName("about")
     String about;
+
+    @SerializedName("left_tributaries")
     String left_tributaries;
+
+    @SerializedName("right_tributaries")
     String right_tributaries;
+
+    @SerializedName("dam")
     String dam;
+
+    @SerializedName("mythology")
     String mythology;
+
+    @SerializedName("summary")
     String summary;
 
-    public rivers(int id, String name, String length, String source, String destination, String codeno, String about, String left_tributaries, String right_tributaries, String dam, String mythology, String summary) {
+    @SerializedName("indian_length")
+    String indian_length;
+
+    @SerializedName("major")
+    String major;
+
+    public rivers(int id, String name, String length, String source, String destination, String codeno, String about, String left_tributaries, String right_tributaries, String dam, String mythology, String summary, String indian_length, String major) {
         this.id = id;
         this.name = name;
         this.length = length;
@@ -27,6 +58,8 @@ public class rivers {
         this.dam = dam;
         this.mythology = mythology;
         this.summary = summary;
+        this.indian_length = indian_length;
+        this.major = major;
     }
 
     public int getId() {
@@ -75,5 +108,13 @@ public class rivers {
 
     public String getSummary() {
         return summary;
+    }
+
+    public String getIndian_length() {
+        return indian_length;
+    }
+
+    public String getMajor() {
+        return major;
     }
 }

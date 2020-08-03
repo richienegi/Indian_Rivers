@@ -13,6 +13,8 @@
    <color name="bkg_card">#DC6243</color>-->
    <!-- <color name="colorPrimary">#19D4EE</color>
     <color name="bkg_card">#29304E</color>-->
+    <color name="button_default_color">#76989898</color>
+    <color name="button_selected_color">#ED5C4D</color>
     <color name="colorPrimary">#273253</color>
 
     <color name="bkg_card">#ED5C4D</color>

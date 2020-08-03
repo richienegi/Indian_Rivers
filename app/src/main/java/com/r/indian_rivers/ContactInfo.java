@@ -15,6 +15,8 @@ public class ContactInfo {
     protected String dam;
     protected String mythology;
     protected String summary;
+    protected String indian_length;
+    protected String major;
 
 
     protected static final String ELength  = "Length : ";
@@ -23,6 +25,8 @@ public class ContactInfo {
     protected static final String HSource = "स्रोत : ";
     protected static final String EDestination = "Destination : ";
     protected static final String HDestination = "गंतव्य : ";
+    protected static final String EindianLength = "Length in India : ";
+    protected static final String HindianLength = "भारत में लंबाई : ";
 
     public static Comparator<ContactInfo> RiverName = new Comparator<ContactInfo>() {
 
@@ -63,5 +67,9 @@ public class ContactInfo {
 
 
         }};
+
+
+
+
 }
 

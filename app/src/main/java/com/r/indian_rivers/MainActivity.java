@@ -19,7 +19,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -40,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setSubtitle("Notes");
         prefManager = new PrefManager(this);
         mNavigationView = findViewById(R.id.navigation_view);
         mDrawerLayout = findViewById(R.id.drawer_layout);
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     MainActivity.lang="English";
                     manager.beginTransaction().replace(R.id.activity, new EMainList()).commit();
-                    }
+                }
 
                 else if(item.getItemId()==R.id.navigation_hindi)
                 {
@@ -71,11 +71,11 @@ public class MainActivity extends AppCompatActivity {
                     manager.beginTransaction().replace(R.id.activity, new HMainList()).commit();
                     }
 
-                else if(item.getItemId()==R.id.suggestion)
+                /*else if(item.getItemId()==R.id.suggestion)
                 {
                     manager.beginTransaction().replace(R.id.activity, new Suggestion()).commit();
 
-                }
+                }*/
                 return true;
             }
         });

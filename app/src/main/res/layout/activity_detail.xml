@@ -1,212 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgcolor"
     android:orientation="vertical"
     tools:context=".DetailActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape"
-        android:orientation="vertical"
-        android:padding="@dimen/default_half_padding">
-    <androidx.cardview.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/card_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        card_view:cardCornerRadius="4dp"
-        android:layout_margin="5dp">
-
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <!--<TextView
-                android:fontFamily="@font/my_custom_font"
-                android:id="@+id/n"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_half_padding"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardElevation="5dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/default_half_padding">
+
+                    <TextView
+                        android:id="@+id/source"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/my_custom_font"
+                        android:gravity="center_vertical"
+                        android:text="source"
+                        android:textColor="@color/textcolor"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/length"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/drain"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/my_custom_font"
+                        android:gravity="center_vertical"
+                        android:text="length"
+                        android:textColor="@color/textcolor"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/ilength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/length"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/my_custom_font"
+                        android:gravity="center_vertical"
+                        android:text="length"
+                        android:visibility="gone"
+                        android:textColor="@color/textcolor"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/drain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/source"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/my_custom_font"
+                        android:gravity="center_vertical"
+                        android:text="Drain"
+                        android:textColor="@color/textcolor"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tributeries"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ilength"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/my_custom_font"
+                        android:gravity="center_vertical"
+                        android:text="Tributaries"
+                        android:textColor="@color/textcolor"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_about"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/bkg_card"
-                android:text="contact det"
-                android:padding="2dp"
-                android:gravity="center_vertical"
-                android:textColor="@android:color/white"
-                android:textSize="18dp"/>
-
--->
-            <TextView
-                android:fontFamily="@font/my_custom_font"
-                android:id="@+id/source"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="source"
-                android:textColor="@color/textcolor"
-                android:gravity="center_vertical"
-                android:textSize="14dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp"/>
-
-            <TextView
-                android:fontFamily="@font/my_custom_font"
-                android:id="@+id/length"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/textcolor"
-                android:text="length"
-                android:gravity="center_vertical"
-                android:textSize="14dp"
-                android:layout_below="@id/drain"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp"/>
-
-            <TextView
-                android:textColor="@color/textcolor"
-                android:fontFamily="@font/my_custom_font"
-                android:id="@+id/drain"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Drain"
-                android:gravity="center_vertical"
-                android:textSize="14dp"
-                android:layout_below="@id/source"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp"/>
-
-            <TextView
-                android:textColor="@color/textcolor"
                 android:visibility="gone"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardElevation="5dp"
+                card_view:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/my_custom_font"
+                    android:padding="@dimen/default_half_padding"
+                    android:text="about"
+                    android:textColor="@color/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardElevation="5dp"
+                card_view:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/my_custom_font"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/default_half_padding"
+                    android:text="left"
+                    android:textColor="@color/textcolor"
+                    android:textSize="14dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardElevation="5dp"
+                card_view:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/my_custom_font"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/default_half_padding"
+                    android:text="right"
+                    android:textColor="@color/textcolor"
+                    android:textSize="14dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_dam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardElevation="5dp"
+                card_view:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/dam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/my_custom_font"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/default_half_padding"
+                    android:text="dam"
+                    android:textAppearance="@android:style/TextAppearance"
+                    android:textColor="@color/textcolor"
+                    android:textSize="14dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_mythology"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/my_custom_font"
-                android:id="@+id/tributeries"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tributaries"
-                android:gravity="center_vertical"
-                android:textSize="14dp"
-                android:layout_below="@id/length"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp"/>
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:visibility="gone"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/card_about"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        card_view:cardCornerRadius="4dp"
-        android:layout_margin="5dp">
-        <TextView
-            android:textColor="@color/textcolor"
-                android:id="@+id/about"
-            android:fontFamily="@font/my_custom_font"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="about"
-                android:padding="4dp"/>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:visibility="gone"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/card_left"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        card_view:cardCornerRadius="4dp"
-        android:layout_margin="5dp">
-        <TextView
-            android:id="@+id/left"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="left"
-            android:fontFamily="@font/my_custom_font"
-            android:gravity="center_vertical"
-            android:textSize="14dp"
-            android:textColor="@color/textcolor"
-            android:padding="4dp"/>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:visibility="gone"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/card_right"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        card_view:cardCornerRadius="4dp"
-        android:layout_margin="5dp">
-        <TextView
-            android:textColor="@color/textcolor"
-            android:id="@+id/right"
-            android:fontFamily="@font/my_custom_font"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="right"
-            android:gravity="center_vertical"
-            android:textSize="14dp"
-            android:padding="4dp"/>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:visibility="gone"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/card_dam"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        card_view:cardCornerRadius="4dp"
-        android:layout_margin="5dp">
-        <TextView
-            android:textColor="@color/textcolor"
-            android:id="@+id/dam"
-            android:fontFamily="@font/my_custom_font"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="dam"
-            android:gravity="center_vertical"
-            android:textSize="14dp"
-            android:textAppearance="@android:style/TextAppearance"
-            android:padding="4dp"/>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/card_mythology"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    card_view:cardCornerRadius="4dp"
-    android:layout_margin="5dp"
-    android:fontFamily="@font/my_custom_font"
-    android:visibility="gone">
-    <TextView
-        android:textColor="@color/textcolor"
-        android:id="@+id/mythology"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="mythology"
-        android:gravity="center_vertical"
-        android:textSize="14dp"
-        android:padding="4dp"/>
-</androidx.cardview.widget.CardView>
-    </LinearLayout>
+                android:visibility="gone"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardElevation="5dp"
+                card_view:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/mythology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/default_half_padding"
+                    android:text="mythology"
+                    android:textColor="@color/textcolor"
+                    android:textSize="14dp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
     </ScrollView>
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/Ad_detail">
-    </com.google.android.gms.ads.AdView>
-</LinearLayout>
+        ads:adUnitId="@string/Ad_detail" />
+
 </LinearLayout>

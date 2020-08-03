@@ -28,6 +28,8 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 /**
@@ -38,6 +40,7 @@ public class Suggestion extends Fragment {
 AdView mAdView;
 TextInputEditText memail,msug;
 Button btn;
+    AdRequest adRequest;
     public Suggestion() {
         // Required empty public constructor
     }
@@ -50,7 +53,7 @@ Button btn;
         View view=inflater.inflate(R.layout.fragment_suggestion, container, false);
 
         mAdView = view.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         memail=view.findViewById(R.id.from);
         msug=view.findViewById(R.id.suggestion);
@@ -76,7 +79,23 @@ else {
                 }
             }
         });
-        return view;    }
+        TimerTask tt = new TimerTask() {
+
+            @Override
+            public void run() {
+                getActivity().runOnUiThread(new Runnable() {
+                    public void run() {
+                        mAdView.loadAd(adRequest);
+                    }
+                });
+
+            }
+        };
+
+        Timer t = new Timer();
+        t.scheduleAtFixedRate(tt, 0, 1000 * 30);
+        return view;
+    }
 
     private void sendRequest(final String from, final String suggestion){
 

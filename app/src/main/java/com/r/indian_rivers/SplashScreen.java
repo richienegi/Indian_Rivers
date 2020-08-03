@@ -21,7 +21,7 @@ import com.google.android.gms.ads.formats.NativeAd;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SplashScreen extends AppCompatActivity {
-PrefManager mypref;
+
 CircleImageView mimg;
 TextView mtxt;
     @Override
@@ -39,7 +39,6 @@ TextView mtxt;
 
 // finally change the color
         window.setStatusBarColor(ContextCompat.getColor(this,R.color.colorPrimaryDark));
-        mypref = new PrefManager(this);
         mimg=findViewById(R.id.img);
         mtxt=findViewById(R.id.text);
 
@@ -64,7 +63,7 @@ TextView mtxt;
 
                 public void run() {
 
-                    Intent i = new Intent(SplashScreen.this, MainActivity.class);
+                    Intent i = new Intent(SplashScreen.this, MainOption.class);
 
                     startActivity(i);
 
