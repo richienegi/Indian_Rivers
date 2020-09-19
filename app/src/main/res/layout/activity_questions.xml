@@ -4,156 +4,203 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Questions">
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
-    android:visibility="gone"
-    android:id="@+id/main"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:background="@color/bgcolor"
+    tools:context=".views.activity.Questions">
+
+
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-    <LinearLayout
-        android:background="@color/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-       >
+        android:visibility="gone">
 
-        <TextView
-            android:textColor="#fff"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:padding="10dp"
+                tools:ignore="NestedWeights">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="Rivers Quiz"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/timeer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.484" />
+
+                <TextView
+                    android:id="@+id/timeer"
+                    style="@style/AppTheme"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/questionback"
+                    android:gravity="center"
+                    android:text="1:00"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.974"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.108" />
+
+                <TextView
+                    android:id="@+id/question"
+                    style="@style/AppTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/questionback"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/question"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.473"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.568" />
+
+                <TextView
+                    android:id="@+id/no_of_question"
+                    style="@style/AppTheme"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/questionback"
+                    android:gravity="center"
+                    android:text="5/10"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/ans1"
+                    style="@style/AppTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/default_button"
+                    android:text="@string/ans1"
+                    app:backgroundTint="@color/bkg_card" />
+
+                <Button
+                    android:id="@+id/ans2"
+                    style="@style/AppTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/default_button"
+                    android:text="@string/ans2"
+                    app:backgroundTint="@color/bkg_card" />
+
+                <Button
+                    android:id="@+id/ans3"
+                    style="@style/AppTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/default_button"
+                    android:text="@string/ans3"
+                    app:backgroundTint="@color/bkg_card" />
+
+                <Button
+                    android:id="@+id/ans4"
+                    style="@style/AppTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/default_button"
+                    android:text="@string/ans4"
+                    app:backgroundTint="@color/bkg_card" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:padding="2dp"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:text="Rivers Quiz"></TextView>
-        <TextView
-            style="@style/AppTheme"
-            android:id="@+id/timeer"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:layout_gravity="right"
-            android:background="@drawable/questionback"
-            android:gravity="center"
-            android:text="1:00"
-            android:textSize="16sp"
-            android:textStyle="bold"></TextView>
-        <TextView
-            style="@style/AppTheme"
-            android:id="@+id/question"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/questionback"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:padding="16dp"
-            android:layout_width="wrap_content"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/skip"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:text="Skip"
+                android:textColor="#000"
+                app:strokeColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/default_button"
+                android:enabled="false"
+                android:text="Next"
+                android:textColor="#000"
+                app:backgroundTint="@color/bkg_card" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/banner_container"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/question"></TextView>
-
-        <TextView
-            style="@style/AppTheme"
-            android:id="@+id/no_of_question"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/questionback"
-            android:gravity="center"
-            android:text="5/10"
-            android:textSize="16sp"
-            android:textStyle="bold"></TextView>
-
-
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            style="@style/AppTheme"
-            android:id="@+id/ans1"
-            android:background="@drawable/default_button"
-            android:layout_margin="8dp"
-            android:text="@string/ans1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></Button>
-        <Button
-            style="@style/AppTheme"
-            android:id="@+id/ans2"
-            android:background="@drawable/default_button"
-            android:layout_margin="8dp"
-            android:text="@string/ans2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></Button>
-        <Button
-            style="@style/AppTheme"
-            android:id="@+id/ans3"
-            android:background="@drawable/default_button"
-            android:layout_margin="8dp"
-            android:text="@string/ans3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></Button>
-        <Button
-            style="@style/AppTheme"
-            android:id="@+id/ans4"
-            android:background="@drawable/default_button"
-            android:layout_margin="8dp"
-            android:text="@string/ans4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></Button>
-    </LinearLayout>
-    <RelativeLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-
-            android:id="@+id/skip"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/roundboder"
-            android:backgroundTint="#FA7074"
-            android:text="Skip"
-            android:textColor="#fff"></Button>
-
-        <Button
-            android:id="@+id/next"
-            android:textColor="#000"
-            android:enabled="false"
-            android:background="@drawable/button"
-            android:text="Next"
-            android:layout_marginRight="10dp"
-            android:layout_alignParentRight="true"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"></Button>
-    </RelativeLayout>
-</LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/banner_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
-</LinearLayout>
-</ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

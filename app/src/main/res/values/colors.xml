@@ -2,27 +2,26 @@
 <resources>
     <!--<color name="colorPrimary">#008577</color>-->
     <!--<color name="bkg_card">#43ADF1</color>-->
-   <!-- <color name="colorPrimary">#804000</color>
-    <color name="bkg_card">#000080</color>-->
-<!--    <color name="colorPrimary">#d2691e</color>
-    <color name="bkg_card">#556b2f</color>-->
-<!--    <color name="colorPrimary">#eba15b</color>-->
-<!--   <color name="bkg_card">#6b992b</color>-->
-<!--   <color name="bkg_card">#5e4eed</color>-->
-   <!-- <color name="colorPrimary">#355A24</color>
-   <color name="bkg_card">#DC6243</color>-->
-   <!-- <color name="colorPrimary">#19D4EE</color>
-    <color name="bkg_card">#29304E</color>-->
+    <!-- <color name="colorPrimary">#804000</color>
+     <color name="bkg_card">#000080</color>-->
+    <!--    <color name="colorPrimary">#d2691e</color>
+        <color name="bkg_card">#556b2f</color>-->
+    <!--    <color name="colorPrimary">#eba15b</color>-->
+    <!--   <color name="bkg_card">#6b992b</color>-->
+    <!--   <color name="bkg_card">#5e4eed</color>-->
+    <!-- <color name="colorPrimary">#355A24</color>
+    <color name="bkg_card">#DC6243</color>-->
+    <!-- <color name="colorPrimary">#19D4EE</color>
+     <color name="bkg_card">#29304E</color>-->
+    <color name="colorPrimary">#273253</color>
+    <color name="colorPrimaryDark">#273253</color>
+    <color name="colorAccent">#ED5C4D</color>
+
     <color name="button_default_color">#76989898</color>
     <color name="button_selected_color">#ED5C4D</color>
-    <color name="colorPrimary">#273253</color>
-
     <color name="bkg_card">#ED5C4D</color>
-        <color name="colorPrimaryDark">#273253</color>
-<!--        <color name="colorAccent">#D81B60</color>-->
-        <color name="colorAccent">#ED5C4D</color>
+    <!--        <color name="colorAccent">#D81B60</color>-->
     <color name="bgcolor">#F4E9DA</color>
-        <color name="bgBottomNavigation">#43ADF1</color>
-        <color name="textcolor">#000</color>
+    <color name="textcolor">#000</color>
     <color name="bottomBorder">#6A7579</color>
-    </resources>
+</resources>

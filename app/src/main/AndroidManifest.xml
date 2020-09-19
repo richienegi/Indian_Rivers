@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".MyApplication"
+        android:name=".util.MyApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,27 +14,48 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DetailPage"></activity>
-        <activity android:name=".Peninsular" />
-        <activity android:name=".Himalayan" />
-        <activity android:name=".River_System" />
-        <activity android:name=".Suggestions" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Questions" />
-        <activity android:name=".AnswerSheet" />
-        <activity android:name=".Map" />
-        <activity android:name=".MainOption" />
+
+        <activity
+            android:name=".views.activity.DetailPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.Himalayan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.River_System"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.Suggestions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.Questions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.AnswerSheet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.Map"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.MainOption"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity" />
+            android:value=".views.activity.MainActivity" />
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
 
-        <activity android:name=".DetailActivity" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".views.activity.DetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.SplashScreen"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

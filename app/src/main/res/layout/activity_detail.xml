@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgcolor"
     android:orientation="vertical"
-    tools:context=".DetailActivity">
+    tools:context=".views.activity.DetailActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,17 +16,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/default_half_padding"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/default_quarter_padding">
 
-            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            <androidx.cardview.widget.CardView
                 android:id="@+id/card_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                card_view:cardCornerRadius="6dp"
-                card_view:cardElevation="5dp"
-                card_view:cardUseCompatPadding="true">
+                app:cardCornerRadius="6dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/my_custom_font"
+
                         android:gravity="center_vertical"
                         android:text="source"
                         android:textColor="@color/textcolor"
@@ -51,7 +51,7 @@
                         android:layout_below="@id/drain"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/my_custom_font"
+
                         android:gravity="center_vertical"
                         android:text="length"
                         android:textColor="@color/textcolor"
@@ -64,12 +64,12 @@
                         android:layout_below="@id/length"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/my_custom_font"
+
                         android:gravity="center_vertical"
                         android:text="length"
-                        android:visibility="gone"
                         android:textColor="@color/textcolor"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/drain"
@@ -78,7 +78,7 @@
                         android:layout_below="@id/source"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/my_custom_font"
+
                         android:gravity="center_vertical"
                         android:text="Drain"
                         android:textColor="@color/textcolor"
@@ -91,7 +91,7 @@
                         android:layout_below="@id/ilength"
                         android:layout_marginStart="5dp"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/my_custom_font"
+
                         android:gravity="center_vertical"
                         android:text="Tributaries"
                         android:textColor="@color/textcolor"
@@ -114,7 +114,7 @@
                     android:id="@+id/about"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/my_custom_font"
+
                     android:padding="@dimen/default_half_padding"
                     android:text="about"
                     android:textColor="@color/textcolor" />
@@ -134,7 +134,7 @@
                     android:id="@+id/left"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/my_custom_font"
+
                     android:gravity="center_vertical"
                     android:padding="@dimen/default_half_padding"
                     android:text="left"
@@ -156,7 +156,7 @@
                     android:id="@+id/right"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/my_custom_font"
+
                     android:gravity="center_vertical"
                     android:padding="@dimen/default_half_padding"
                     android:text="right"
@@ -178,7 +178,7 @@
                     android:id="@+id/dam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/my_custom_font"
+
                     android:gravity="center_vertical"
                     android:padding="@dimen/default_half_padding"
                     android:text="dam"
@@ -192,7 +192,7 @@
                 android:id="@+id/card_mythology"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/my_custom_font"
+
                 android:visibility="gone"
                 card_view:cardCornerRadius="6dp"
                 card_view:cardElevation="5dp"

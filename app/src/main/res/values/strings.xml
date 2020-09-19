@@ -1,32 +1,19 @@
 <resources>
     <string name="app_name">Indian Rivers</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nav_rate">Rate</string>
     <string name="nav_share">Share</string>
+    <string name="nav_map">Rivers Map</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
-    <string name="thanku">Thank you for your valueable suggestion.we will consider it.</string>
+    <string name="thanku">Thank you for your valuable suggestion.</string>
     <string name="ad_app_id">ca-app-pub-5013638152042731~7875078560</string>
-
-
-
 
     <string name="Ad_englishfragment">ca-app-pub-5013638152042731/4291056776</string>
     <string name="Ad_hindifragment">ca-app-pub-5013638152042731/8968668387</string>
-    <string name="Ad_suggestionfragment">ca-app-pub-5013638152042731/6178853518</string>
     <string name="Ad_langalert">ca-app-pub-5013638152042731/2403260033</string>
     <string name="Ad_langalert2">ca-app-pub-5013638152042731/5769705698</string>
-    <string name="Ad_exit">ca-app-pub-5013638152042731/2048036816</string>
     <string name="Ad_detail">ca-app-pub-5013638152042731/8040645812</string>
-
-
-
-
-
-
-
 
 <!--
 
@@ -47,17 +34,9 @@
     <string name="Detail_page">1555464694639041_1573004632885047</string><!--done-->
     <string name="Quiz_page">1555464694639041_1573006816218162</string><!--done-->
     <string name="Quiz_interstitial">1555464694639041_1573008252884685</string><!--done-->
-    <string name="fbAd_englishfragment">1555464694639041_1573011512884359</string>
-    <string name="fbAd_hindifragment">1555464694639041_1573012346217609</string>
     <string name="fbAd_suggestionfragment">1555464694639041_1573014026217441</string><!--done-->
     <string name="fbAd_langalert">1555464694639041_1573014609550716</string><!--done-->
-    <string name="fbAd_langalert2">1555464694639041_1573015239550653</string>
-    <string name="fbAd_exit">1555464694639041_1573016742883836</string>
-    <string name="fbAd_detail">1555464694639041_1573017466217097</string>
     <string name="answer_sheet">1555464694639041_1573573166161527</string><!--done-->
-
-
-
 
 
     <string name="contact_det">contact det</string>
@@ -71,26 +50,29 @@
     <string name="suggestion">Suggestion</string>
     <string name="question"> Which of the following river is known as Dakshina Ganga?</string>
     <string name="ans1"> A. Krishna</string>
-
     <string name="ans2"> B. Mahanadi</string>
-
     <string name="ans3">C. Godavari</string>
-
     <string name="ans4">D. Cauvery</string>
-    <string name="river_System">
-</string>
+
     <string name="hriver_system">अपवाह प्रणाली</string>
     <string name="hnotes">अध्ययन</string>
     <string name="hquiz">प्रश्नोत्तरी</string>
     <string name="hsuggestion">सुझाव</string>
 
-
-    <string name="eriver1">Indus</string>
-    <string name="eriver2">GANGA</string>
-    <string name="eriver3">BRAHMPUTRA</string>
-
     <string name="hriver1">सिंधु</string>
     <string name="hriver2">गंगा</string>
     <string name="hriver3">ब्रह्मपुत्र</string>
+
+    <string name="hindi">हिन्दी</string>
+
+    <string-array name="languages">
+        <item>@string/hindi</item>
+        <item>English</item>
+    </string-array>
+
+    <string name="alert_set_lang_title">Set Default Language</string>
+    <string name="alert_set_lang_positive">Set</string>
+    <string name="alert_set_lang_cancel">Cancel</string>
+    <string name="lang_set_toast">%1$s is set as your default language</string>
 
 </resources>

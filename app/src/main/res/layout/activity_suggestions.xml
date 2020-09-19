@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Suggestions">
+    android:background="@color/bgcolor"
+    tools:context=".views.activity.Suggestions">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +19,8 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="12dp"
                 android:layout_weight="1"
                 android:background="@drawable/shape"
@@ -26,9 +29,11 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/alert_title_data"
-                    style="@style/TextInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/title_height"
+                    app:boxStrokeColor="@color/bkg_card"
+                    app:hintTextColor="@color/bkg_card"
                     app:errorEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -36,27 +41,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="top"
-                        android:background="@drawable/bottom_border"
                         android:gravity="start"
-                        android:hint="Sender's Email"
-                        android:inputType="textPersonName"
+                        android:hint="My Email"
+                        android:inputType="textEmailAddress"
                         android:padding="@dimen/default_full_padding"
                         android:textColor="@color/colorPrimaryDark" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/TextInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
+                    app:boxStrokeColor="@color/bkg_card"
+                    app:hintTextColor="@color/bkg_card"
                     app:errorEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/suggestion"
                         android:layout_width="match_parent"
                         android:layout_height="290dp"
-                        android:background="@drawable/bottom_border"
                         android:gravity="start"
-                        android:hint="Suggestion"
+                        android:hint="My Suggestion"
                         android:inputType="textMultiLine"
                         android:padding="@dimen/default_full_padding"
                         android:textColor="@color/colorPrimaryDark" />
@@ -67,10 +72,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/setbutton"
-                    android:text="Set"
-                    android:textColor="@color/bkg_card"
-                    android:textStyle="bold" />
+                    android:text="Send"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/bkg_card" />
 
             </LinearLayout>
         </LinearLayout>
@@ -81,8 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

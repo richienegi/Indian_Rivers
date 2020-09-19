@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".SplashScreen">
-<de.hdodenhof.circleimageview.CircleImageView
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/img"
-    android:scaleType="centerCrop"
-    android:layout_width="200dp"
-    android:layout_height="200dp"
-    android:src="@drawable/splash"
-    android:layout_centerInParent="true"
-    app:civ_border_width="4dp"
-    app:civ_border_color="@color/bkg_card"
-    tools:ignore="MissingConstraints">
-</de.hdodenhof.circleimageview.CircleImageView>
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".views.activity.SplashScreen">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash"
+        app:civ_border_color="@color/bkg_card"
+        app:civ_border_width="4dp"
+        tools:ignore="MissingConstraints" />
+
     <TextView
-        android:padding="2dp"
-        android:textSize="24dp"
-        android:textColor="#fff"
         android:id="@+id/text"
-        android:text="@string/app_name"
-        android:layout_below="@+id/img"
         android:layout_width="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_height="wrap_content"></TextView>
-</RelativeLayout>
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:text="@string/app_name"
+        android:textColor="#fff"
+        android:textSize="24dp" />
+
+</LinearLayout>
